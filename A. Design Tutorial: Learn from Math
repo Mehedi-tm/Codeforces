@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main()
+{
+    ll n;
+    cin>>n;
+    if(n%2==0)
+    {
+        cout<<4<<" "<<n-4<<endl;// ekta odd number ke 4 diye biyog korle kokhono prime number pawa sombhob na
+    }
+    else
+    {
+        cout<<9<<" "<<n-9<<endl;//ekta even number ke 9 diye biyog korle kokhono prime number pawa jai na
+    }
+    return 0;
+
+
+}
