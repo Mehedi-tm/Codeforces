@@ -1,0 +1,39 @@
+Algorithm::
+Sort the array of coins in decreasing order.
+Initialize result as empty.
+Find the largest denomination that is smaller than current amount.
+Add found denomination to result. Subtract value of found denomination from amount.
+If amount becomes 0, then print result.
+Else repeat steps 3 and 4 for new value of V.
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+void findcoin(ll n)
+{
+    ll a[ ]={1 , 5, 10, 20, 100};
+    ll m=sizeof(a)/sizeof(a[0]);
+    sort(a,a+m);
+    ll i;
+    vector<ll>ans;
+    for(i=m-1; i>=0; i--)
+    {
+        while(n>=a[i])
+        {
+            n-=a[i];
+            ans.push_back(a[i]);
+        }
+    }
+    cout<<ans.size()<<endl;
+}
+int main()
+{
+    ll n;
+    cin>>n;
+    findcoin(n);
+    return 0;
+}
