@@ -1,0 +1,38 @@
+//tourist code ::
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k,ans=0;
+    scanf("%d %d",&n,&k);
+    for(int i=1; i<=n; i++)
+    {
+        if(k+i*5<=240)
+        {
+            ans++;
+            k+=5*i;
+        }
+    }
+    printf("%d\n",ans);
+    return 0;
+}
+
+
+my code::
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k,i,j=0,m,ans=0;
+    cin>>n>>k;
+    m=240-k;
+    for(i=1; i<=n; i++)
+    {
+        j+=i*5;
+        if(j<=m)
+            ans++;
+
+    }
+    cout<<ans<<endl;
+}
